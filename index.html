@@ -53,28 +53,7 @@
       transform: scale(1.05);
       border-color: #555;
     }
-  
-  /* 弹出层样式 */
-  #lightbox {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-  }
-
-  #lightbox img {
-    max-width: 90%;
-    max-height: 90%;
-    box-shadow: 0 0 15px white;
-    border-radius: 10px;
-  }
-</style>
+  </style>
 </head>
 <body>
   <header>
@@ -96,34 +75,14 @@
     <div class="gallery" id="gallery-container"></div>
   </div>
 
-  
-<script>
-  const gallery = document.querySelector('.gallery');
-  const lightbox = document.getElementById('lightbox');
-  const lightboxImg = lightbox.querySelector('img');
-
-  for (let i = 1; i <= 16; i++) {
-    const img = document.createElement('img');
-    img.src = `images/${i}.jpg`;
-    img.alt = `图像 ${i}`;
-    img.style.cursor = "pointer";
-
-    img.addEventListener('click', () => {
-      lightboxImg.src = img.src;
-      lightbox.style.display = 'flex';
-    });
-
-    gallery.appendChild(img);
-  }
-
-  lightbox.addEventListener('click', () => {
-    lightbox.style.display = 'none';
-  });
-</script>
-
-
-<div id="lightbox">
-  <img src="" alt="放大图像">
-</div>
+  <script>
+    const gallery = document.getElementById('gallery-container');
+    for (let i = 1; i <= 16; i++) {
+      const img = document.createElement('img');
+      img.src = `images/${i}.jpg`;
+      img.alt = `图像 ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
 </body>
 </html>
