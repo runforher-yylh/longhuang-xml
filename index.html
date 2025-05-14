@@ -1,73 +1,64 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-  <title>焱燚龙凰</title>
-  <style>
-    body {
-      background-color: #fdfdfd;
-      font-family: "Noto Serif SC", serif;
-      color: #333;
-      margin: 0;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      text-align: center;
-    }
-    .section {
-      max-width: 800px;
-      margin: 40px auto;
-      line-height: 1.8;
-    }
-    .gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
-      padding: 20px 0;
-    }
-    .gallery img {
-      max-width: 200px;
-      height: auto;
-      border: 2px solid #ccc;
-      border-radius: 6px;
-      transition: transform 0.3s;
-    }
-    .gallery img:hover {
-      transform: scale(1.05);
-      border-color: #555;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>焱燚龙凰</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .content {
+            padding: 20px;
+        }
+        .gallery img {
+            max-width: 200px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-  <h1>焱燚龙凰</h1>
-  <div class="section">
-    <p><strong>自我介绍：</strong>自顾自画，偶尔写文。</p>
-  </div>
+    <header>
+        <h1>焱燚龙凰</h1>
+        <p>自顾自画，偶尔写文。</p>
+    </header>
+    <nav>
+        <a href="index.html">首页</a>
+        <a href="articles/qingshazhang.html">文章</a>
+        <a href="#gallery">画廊</a>
+    </nav>
+    <div class="content">
+        <h2>欢迎来到我的个人网站</h2>
+        <p>在这里你可以看到我写的文章和画的画。</p>
 
-  <div class="section">
-    <h2>文章：《青纱帐》</h2>
-    <p>有风吹来，山脚下一人多高的深绿色野高粱整片整片地摇曳，叶子摩挲的沙沙声密密麻麻、哐哐当当，像是山野间孤魂野鬼的呐喊，像是云水边无家可归游子的悲泣，也像是青崖山鬼谷谷主举世杀伐后的万千薄凉。</p>
-    <p>村于丛柳疏边出，人自高粱绿里来。</p>
-    <p>那绿色像是一道道高耸的帐子，温客行手握一柄染了血的长剑，跛着腿左右摇晃着穿梭其中。他看不清前路，只感受到脸上还未冷却的莫怀阳的污血。剑刃无力地拖在地上，将那结实黝黑的泥土划出一道长长的伤口。老狗莫怀阳在温客行简单几下抬臂挥手间便一命呜呼，腥臭的鲜血在那长剑上瞬间炸开，炸出了几朵深红的梅花。</p>
-    <p>温客行在这青纱帐中茫然前进，看不见前方，也记不得来路。四周静谧可怖，偶有夏虫争鸣。他被这层层绿色包围，清新的泥土与植物香气扑鼻而来，这竟让他笑着落了泪来。</p>
-    <p>“阿湘，哥对不起你。哥让他死得太容易了。阿湘......”</p>
-    <p>温客行就这样不停地走着，时间仿佛停滞了，直到他在一艘没浆没帆的白船上醒来......</p>
-  </div>
-
-  <div class="section">
-    <h2>画廊</h2>
-    <div class="gallery" id="gallery"></div>
-  </div>
-
-  <script>
-    const gallery = document.getElementById('gallery');
-    for (let i = 1; i <= 16; i++) {
-      const img = document.createElement('img');
-      img.src = `images/${i}.jpg`;
-      img.alt = `图像 ${i}`;
-      gallery.appendChild(img);
-    }
-  </script>
+        <h3 id="gallery">部分作品预览</h3>
+        <div class="gallery">
+            <img src="images/sample.jpeg" alt="示例画作">
+        </div>
+    </div>
 </body>
 </html>
