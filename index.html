@@ -1,64 +1,50 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>焱燚龙凰</title>
-    <style>
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #34495e;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #1abc9c;
-        }
-        .content {
-            padding: 20px;
-        }
-        .gallery img {
-            max-width: 200px;
-            margin: 10px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>焱燚龙凰 - 画廊</title>
+  <style>
+    body {
+      background-color: #f7f7f7;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #555;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>焱燚龙凰</h1>
-        <p>自顾自画，偶尔写文。</p>
-    </header>
-    <nav>
-        <a href="index.html">首页</a>
-        <a href="articles/qingshazhang.html">文章</a>
-        <a href="#gallery">画廊</a>
-    </nav>
-    <div class="content">
-        <h2>欢迎来到我的个人网站</h2>
-        <p>在这里你可以看到我写的文章和画的画。</p>
+  <h1>焱燚龙凰 · 画廊</h1>
+  <div class="gallery" id="gallery"></div>
 
-        <h3 id="gallery">部分作品预览</h3>
-        <div class="gallery">
-            <img src="images/sample.jpeg" alt="示例画作">
-        </div>
-    </div>
+  <script>
+    const gallery = document.getElementById('gallery');
+
+    for (let i = 1; i <= 16; i++) {
+      const img = document.createElement('img');
+      img.src = `images/${i}.jpg`;
+      img.alt = `图像 ${i}`;
+      gallery.appendChild(img);
+    }
+  </script>
 </body>
 </html>
