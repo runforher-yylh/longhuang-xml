@@ -5,41 +5,33 @@
     <meta charset="UTF-8">
     <title>焱燚龙凰</title>
     <style>
-        body {
-            font-family: "Microsoft YaHei", sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #34495e;
-            overflow: hidden;
-        }
-        nav a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #1abc9c;
-        }
-        .content {
-            padding: 20px;
-        }
-        .gallery img {
-            max-width: 200px;
-            margin: 10px;
-        }
-    </style>
+    body {
+      background-color: #f7f7f7;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    h1 {
+      margin-top: 30px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery img {
+      max-width: 200px;
+      height: auto;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      border-color: #555;
+    }
+  </style>
 </head>
 <body>
     <header>
